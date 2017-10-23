@@ -12,6 +12,7 @@
 		060789191F9D86A400C30772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 060789171F9D86A400C30772 /* Main.storyboard */; };
 		0607891B1F9D86A400C30772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0607891A1F9D86A400C30772 /* Assets.xcassets */; };
 		0607891E1F9D86A400C30772 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0607891C1F9D86A400C30772 /* LaunchScreen.storyboard */; };
+		D555FB6F23E6FE2FC401D7EC /* Pods_daniel_eureka_tutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BAE5726D7D86C2C45E224F7 /* Pods_daniel_eureka_tutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0607891A1F9D86A400C30772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0607891D1F9D86A400C30772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0607891F1F9D86A400C30772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BAE5726D7D86C2C45E224F7 /* Pods_daniel_eureka_tutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_daniel_eureka_tutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		313C4EE98675AA7B9B3B51B5 /* Pods-daniel-eureka-tutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daniel-eureka-tutorial.release.xcconfig"; path = "Pods/Target Support Files/Pods-daniel-eureka-tutorial/Pods-daniel-eureka-tutorial.release.xcconfig"; sourceTree = "<group>"; };
+		E4F64F6B6C7615E8E0984533 /* Pods-daniel-eureka-tutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-daniel-eureka-tutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-daniel-eureka-tutorial/Pods-daniel-eureka-tutorial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D555FB6F23E6FE2FC401D7EC /* Pods_daniel_eureka_tutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				060789121F9D86A400C30772 /* daniel-eureka-tutorial */,
 				060789111F9D86A400C30772 /* Products */,
+				EB6D92D439CA65597A6DB44E /* Pods */,
+				68ECA630331B102FFC54D7A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "daniel-eureka-tutorial";
 			sourceTree = "<group>";
 		};
+		68ECA630331B102FFC54D7A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BAE5726D7D86C2C45E224F7 /* Pods_daniel_eureka_tutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB6D92D439CA65597A6DB44E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4F64F6B6C7615E8E0984533 /* Pods-daniel-eureka-tutorial.debug.xcconfig */,
+				313C4EE98675AA7B9B3B51B5 /* Pods-daniel-eureka-tutorial.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 060789221F9D86A400C30772 /* Build configuration list for PBXNativeTarget "daniel-eureka-tutorial" */;
 			buildPhases = (
+				1C81B7CB120DA273B16AB6A9 /* [CP] Check Pods Manifest.lock */,
 				0607890C1F9D86A400C30772 /* Sources */,
 				0607890D1F9D86A400C30772 /* Frameworks */,
 				0607890E1F9D86A400C30772 /* Resources */,
+				FF22F7E29C7276FD18CD2963 /* [CP] Embed Pods Frameworks */,
+				9C6929DC75E3AD8F81E0DB13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C81B7CB120DA273B16AB6A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-daniel-eureka-tutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C6929DC75E3AD8F81E0DB13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daniel-eureka-tutorial/Pods-daniel-eureka-tutorial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF22F7E29C7276FD18CD2963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-daniel-eureka-tutorial/Pods-daniel-eureka-tutorial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-daniel-eureka-tutorial/Pods-daniel-eureka-tutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0607890C1F9D86A400C30772 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		060789231F9D86A400C30772 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4F64F6B6C7615E8E0984533 /* Pods-daniel-eureka-tutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		060789241F9D86A400C30772 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 313C4EE98675AA7B9B3B51B5 /* Pods-daniel-eureka-tutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
