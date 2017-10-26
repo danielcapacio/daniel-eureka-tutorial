@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-164" y="65"/>
         </scene>
-        <!--Data Transfer-->
+        <!--Data Transfer Controller-->
         <scene sceneID="BeC-M6-pOn">
             <objects>
-                <viewController title="Data Transfer" id="8T1-Xx-MSE" customClass="DataTransferController" customModule="daniel_eureka_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8T1-Xx-MSE" customClass="DataTransferController" customModule="daniel_eureka_tutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fzo-z6-7TY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

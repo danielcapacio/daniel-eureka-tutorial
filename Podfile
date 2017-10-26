@@ -7,5 +7,6 @@ target 'daniel-eureka-tutorial' do
 
   # Pods for daniel-eureka-tutorial
   pod 'Eureka'
+  pod 'ImageRow'
 
 end
