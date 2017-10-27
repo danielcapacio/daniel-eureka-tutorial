@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import Eureka
 
-class DataTransferController: UIViewController {
-    
-    @IBOutlet weak var label_test: UILabel!
+class DataTransferController: FormViewController {
     
     var formData = ["fullName" : "",
                     "dob" : "",
@@ -22,24 +21,18 @@ class DataTransferController: UIViewController {
     override func viewDidLoad() {
         self.title = "Form data"
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.label_test.text = formData["fullName"]
+        // sending all the data to label rows for device-friendly orientation (landscape/portrait)
+        form
+            +++ Section()
+                <<< LabelRow() { $0.title = "Full Name"; $0.value = formData["fullName"]; }
+                <<< LabelRow() { $0.title = "Date of Birth"; $0.value = formData["dob"] }
+                <<< LabelRow() { $0.title = "Primary Email"; $0.value = formData["email"] }
+                <<< LabelRow() { $0.title = "Department"; $0.value = formData["department"] }
+                <<< LabelRow() { $0.title = "Username"; $0.value = formData["username"] }
+                <<< LabelRow() { $0.title = "Password"; $0.value = formData["password"] }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
