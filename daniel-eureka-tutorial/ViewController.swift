@@ -49,11 +49,11 @@ class ViewController: FormViewController {
                 }
                 <<< IntRow() {
                     $0.title = "IntRow"
-                    $0.value = 1408
+                    $0.value = 1408451
                 }
                 <<< EmailRow() {
                     $0.title = "EmailRow"
-                    $0.value = "a@a.com"
+                    $0.value = "rocketdan@work.ca"
                 }
                 <<< TwitterRow() {
                     $0.title = "TwitterRow"
@@ -121,7 +121,7 @@ class ViewController: FormViewController {
                 }
             +++ Section()
                 <<< ButtonRow() { (row: ButtonRow) -> Void in
-                    row.title = "Submit"
+                    row.title = "Example Form"
                     row.presentationMode = .segueName(segueName: "showExampleFormController", onDismiss: nil)
                 }
     }

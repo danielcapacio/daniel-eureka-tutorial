@@ -21,7 +21,6 @@ class DataTransferController: FormViewController {
     override func viewDidLoad() {
         self.title = "Form data"
         super.viewDidLoad()
-        // sending all the data to label rows for device-friendly orientation (landscape/portrait)
         form
             +++ Section()
                 <<< LabelRow() { $0.title = "Full Name"; $0.value = formData["fullName"]; }

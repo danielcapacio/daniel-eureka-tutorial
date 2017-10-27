@@ -42,6 +42,7 @@ class ExampleFormController: FormViewController {
                     $0.validationOptions = .validatesOnDemand
                 }
                 <<< ActionSheetRow<String>() {
+                    $0.tag = "department"
                     $0.title = "Department"
                     $0.selectorTitle = "Choose preferred department"
                     $0.options = ["Mathematics", "Social Studies", "Literature", "Science"]
@@ -95,6 +96,11 @@ class ExampleFormController: FormViewController {
         if segue.identifier == "showDataTransferController" {
             let destinationVC = segue.destination as! DataTransferController
             destinationVC.formData["fullName"] = valuesDictionary["fullName"] as? String
+            destinationVC.formData["dob"] = self.dateToString(date: valuesDictionary["dob"] as! Date)
+            destinationVC.formData["email"] = valuesDictionary["email"] as? String
+            destinationVC.formData["department"] = valuesDictionary["department"] as? String
+            destinationVC.formData["username"] = valuesDictionary["username"] as? String
+            destinationVC.formData["password"] = valuesDictionary["password"] as? String
         }
     }
     
