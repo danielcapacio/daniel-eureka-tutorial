@@ -13,6 +13,7 @@ class ExampleFormController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Example Form"
         
         TextRow.defaultCellUpdate = { cell, row in
             if !row.isValid {

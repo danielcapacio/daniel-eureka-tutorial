@@ -20,6 +20,7 @@ class DataTransferController: UIViewController {
                     "password" : ""]
     
     override func viewDidLoad() {
+        self.title = "Form data"
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.label_test.text = formData["fullName"]
