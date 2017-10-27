@@ -12,12 +12,17 @@ class DataTransferController: UIViewController {
     
     @IBOutlet weak var label_test: UILabel!
     
-    var data:String?
+    var formData = ["fullName" : "",
+                    "dob" : "",
+                    "email" : "",
+                    "department" : "",
+                    "username" : "",
+                    "password" : ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.label_test.text = data
+        self.label_test.text = formData["fullName"]
     }
 
     override func didReceiveMemoryWarning() {

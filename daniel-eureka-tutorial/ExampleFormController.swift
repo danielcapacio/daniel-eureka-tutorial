@@ -21,7 +21,7 @@ class ExampleFormController: FormViewController {
         }
         
         form
-            +++ Section()
+            +++ Section("Personal Information")
                 <<< TextRow() {
                     $0.tag = "fullName"
                     $0.title = "Full Name"
@@ -35,7 +35,7 @@ class ExampleFormController: FormViewController {
                 }
                 <<< TextRow() {
                     $0.tag = "email"
-                    $0.title = "Email Rule"
+                    $0.title = "Primary Email"
                     $0.add(rule: RuleRequired())
                     $0.add(rule: RuleEmail())
                     $0.validationOptions = .validatesOnDemand
@@ -93,7 +93,7 @@ class ExampleFormController: FormViewController {
         // pass and assign values here
         if segue.identifier == "showDataTransferController" {
             let destinationVC = segue.destination as! DataTransferController
-            destinationVC.data = valuesDictionary["password"] as? String
+            destinationVC.formData["fullName"] = valuesDictionary["fullName"] as? String
         }
     }
     
