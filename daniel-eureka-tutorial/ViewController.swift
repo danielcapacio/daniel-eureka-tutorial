@@ -25,7 +25,7 @@ class ViewController: FormViewController {
             cell.textField.textColor = .blue
         }
         
-        self.title = "Sample Fields"
+        self.title = "Sample Field Rows"
         // form ...
         // Add Sections with +++
         // Add Rows with <<<
@@ -71,7 +71,6 @@ class ViewController: FormViewController {
                 <<< DateRow() {
                     $0.title = "DateRow"
                     $0.value = Date();
-                    $0.tag = "dateRow"
                 }
                 <<< CheckRow() {
                     $0.title = "CheckRow"
@@ -97,33 +96,33 @@ class ViewController: FormViewController {
                     $0.selectorTitle = "Favourite genre?"
                     $0.options = ["Adventure", "Horror", "Comedy", "Mystery"]
                     $0.value = "Adventure"
-                    } .onPresent { from, to in
-                        to.popoverPresentationController?.permittedArrowDirections = .up
-                    }
+                } .onPresent { from, to in
+                    to.popoverPresentationController?.permittedArrowDirections = .up
+                }
                 <<< AlertRow<Emoji>() {
                     $0.title = "AlertRow"
                     $0.selectorTitle = "How are you feeling?"
                     $0.options = [😃, 🙁, 😭, 😐, 😎, 😱, 😠, 😗]
                     $0.value = 😎
-                    }.onPresent { _, to in
-                        to.view.tintColor = .red
-                    }
+                }.onPresent { _, to in
+                    to.view.tintColor = .red
+                }
                 <<< PushRow<Emoji>() {
                     $0.title = "PushRow"
                     $0.options = [😃, 🙁, 😭, 😐, 😎, 😱, 😠, 😗]
                     $0.value = 😱
                     $0.selectorTitle = "Choose an Emoji!"
-                    }.onPresent { from, to in
-                        to.dismissOnSelection = false
-                        to.dismissOnChange = false
-                    }
+                }.onPresent { from, to in
+                    to.dismissOnSelection = false
+                    to.dismissOnChange = false
+                }
                 <<< ImageRow() {
                     $0.title = "ImageRow"
                 }
             +++ Section()
                 <<< ButtonRow() { (row: ButtonRow) -> Void in
                     row.title = "Submit"
-                    row.presentationMode = .segueName(segueName: "showDataTransferController", onDismiss: nil)
+                    row.presentationMode = .segueName(segueName: "showExampleFormController", onDismiss: nil)
                 }
     }
 
@@ -132,26 +131,9 @@ class ViewController: FormViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the value of all rows which have a Tag assigned
-        // The dictionary contains the 'rowTag':value pairs.
-        let valuesDictionary = form.values()
-        
-        // pass and assign values here
-        if segue.identifier == "showDataTransferController" {
-            let destinationVC = segue.destination as! DataTransferController
-            destinationVC.data = dateToString(date: valuesDictionary["dateRow"] as! Date)
+        if segue.identifier == "showExampleFormController" {
+            _ = segue.destination as! ExampleFormController
         }
-    }
-    
-    func dateToString(date: Date) -> String {
-        let formatter = DateFormatter()
-        
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let myString = formatter.string(from: date)
-        let yourDate = formatter.date(from: myString)
-        formatter.dateFormat = "dd-MMM-yyyy"
-        
-        return formatter.string(from: yourDate!)
     }
 }
 

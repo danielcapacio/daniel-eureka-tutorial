@@ -21,12 +21,30 @@
                     </view>
                     <navigationItem key="navigationItem" id="b25-kP-anI"/>
                     <connections>
-                        <segue destination="8T1-Xx-MSE" kind="show" identifier="showDataTransferController" id="8eB-D8-UCf"/>
+                        <segue destination="Ac5-x5-ZXV" kind="show" identifier="showExampleFormController" id="FEd-I1-SHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-164" y="65"/>
+        </scene>
+        <!--Example Form Controller-->
+        <scene sceneID="7Wu-Tv-iDk">
+            <objects>
+                <viewController id="Ac5-x5-ZXV" customClass="ExampleFormController" customModule="daniel_eureka_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BeI-T6-Koh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="skm-Ol-HSo"/>
+                    </view>
+                    <connections>
+                        <segue destination="8T1-Xx-MSE" kind="show" identifier="showDataTransferController" id="CAf-gv-9Q9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tg4-aZ-Mz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="64"/>
         </scene>
         <!--Data Transfer Controller-->
         <scene sceneID="BeC-M6-pOn">
@@ -53,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3BN-do-pCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="63"/>
+            <point key="canvasLocation" x="1598" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0MH-Y2-g7u">
